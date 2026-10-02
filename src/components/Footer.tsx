@@ -1,128 +1,152 @@
 import React from 'react';
-import { Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
+import { Phone, Mail, MapPin, ShieldCheck, ArrowUp } from 'lucide-react';
 import { SVCMLogo } from './SVCMLogo';
 
 export const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <footer id="contact" className="border-t border-stone-200 bg-[#faf8f2] pt-16 pb-12 px-5 sm:px-8 md:px-12 w-full text-stone-700">
+    <footer className="border-t border-stone-200 bg-[#FAF8F2] pt-20 pb-14 px-5 sm:px-8 md:px-12 w-full text-stone-700">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-stone-200">
-          {/* Column 1: Brand & Logo */}
-          <div className="space-y-4 lg:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-stone-200">
+          {/* Column 1: Brand & Identity (4 cols) */}
+          <div className="space-y-4 lg:col-span-4">
             <div className="flex items-center gap-3">
-              <SVCMLogo size={42} />
+              <SVCMLogo size={46} />
               <div>
-                <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#b45309] font-bold block">
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#8A5A35] font-bold block">
                   SRI VENKATESWARA
                 </span>
-                <span className="text-base font-bold text-stone-900 leading-tight block">
+                <span className="text-base font-bold text-[#1C1917] leading-tight block">
                   CASHEW MANUFACTURERS
                 </span>
               </div>
             </div>
-            <p className="text-xs text-stone-600 leading-relaxed">
-              Decades of artisan grading and thermal Borma dehydration in Vetapalem, Andhra Pradesh — India's legendary cashew export processing hub.
+            <p className="text-xs text-stone-600 leading-relaxed max-w-sm">
+              Single-origin coastal Andhra cashew processing and international export from Vetapalem — India&apos;s historic capital of thermal Borma dehydration and ivory kernel grading.
             </p>
-            <div className="flex items-center gap-2 text-[11px] font-mono text-emerald-800">
+            <div className="flex items-center gap-2 text-[11px] font-mono text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-3 py-1.5 rounded-xl w-fit">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>100% Whole Kernel Guarantee</span>
+              <span>Direct Factory Accountability • No Intermediaries</span>
             </div>
           </div>
 
-          {/* Column 2: Management & Factory Coordinates */}
-          <div className="space-y-3">
-            <span className="font-mono text-[11px] uppercase tracking-wider text-stone-900 font-bold block">
-              Factory & Plant Office
+          {/* Column 2: Manufacturing Plant Address (3 cols) */}
+          <div className="space-y-3 lg:col-span-3">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-[#8A5A35] font-bold block">
+              FACTORY &amp; PLANT OFFICE
             </span>
             <div className="space-y-2 text-xs text-stone-600">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#b45309] shrink-0 mt-0.5" />
-                <span>
-                  Nayenipalli Industrial Area, Sarvodaya Colony, Vetapalem - 523 187, Prakasam Dist (A.P.), India
+                <MapPin className="w-4 h-4 text-[#C58A3A] shrink-0 mt-0.5" />
+                <span className="leading-relaxed">
+                  Nayenipalli Industrial Area, Sarvodaya Colony, Vetapalem - 523 187, Prakasam District, Andhra Pradesh, India.
                 </span>
               </div>
               <div className="pt-2 border-t border-stone-200/80">
-                <span className="font-semibold text-stone-900 block">Proprietor & Exporter:</span>
-                <span>V. Murali Krishna Murthy</span>
+                <span className="font-mono text-[10px] text-stone-400 uppercase tracking-wider block">
+                  PROPRIETOR &amp; COMMERCIAL HEAD
+                </span>
+                <span className="font-bold text-stone-900 text-xs mt-0.5 block">
+                  V. Murali Krishna Murthy
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Column 3: Telecommunications */}
-          <div className="space-y-3">
-            <span className="font-mono text-[11px] uppercase tracking-wider text-stone-900 font-bold block">
-              Contact Directory
+          {/* Column 3: Contact Directory (3 cols) */}
+          <div className="space-y-3 lg:col-span-3">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-[#8A5A35] font-bold block">
+              TELECOMMUNICATION DIRECTORY
             </span>
             <div className="space-y-2 font-mono text-xs">
               <a
                 href="tel:9246467237"
-                className="flex items-center gap-2 text-stone-800 hover:text-[#b45309] transition-colors"
+                className="flex items-center gap-2 text-stone-800 hover:text-[#183C2C] transition-colors"
               >
-                <Phone className="w-3.5 h-3.5 text-[#b45309]" />
+                <Phone className="w-3.5 h-3.5 text-[#8A5A35]" />
                 <span>Cell: +91 9246467237</span>
               </a>
 
               <a
                 href="tel:9246467406"
-                className="flex items-center gap-2 text-stone-800 hover:text-[#b45309] transition-colors"
+                className="flex items-center gap-2 text-stone-800 hover:text-[#183C2C] transition-colors"
               >
-                <Phone className="w-3.5 h-3.5 text-[#b45309]" />
-                <span>Cell: +91 9246467406</span>
+                <Phone className="w-3.5 h-3.5 text-[#8A5A35]" />
+                <span>Mobile: +91 9246467406</span>
               </a>
 
               <div className="flex items-center gap-2 text-stone-600">
-                <span className="w-3.5 text-center font-bold text-[#b45309]">☎</span>
+                <span className="w-3.5 text-center font-bold text-[#8A5A35]">☎</span>
                 <span>Off: 08594-246237 / 246897</span>
               </div>
 
               <a
                 href="mailto:venkateswaracashew@gmail.com"
-                className="flex items-center gap-2 text-stone-800 hover:text-[#b45309] transition-colors truncate"
+                className="flex items-center gap-2 text-stone-800 hover:text-[#183C2C] transition-colors truncate"
               >
-                <Mail className="w-3.5 h-3.5 text-[#b45309] shrink-0" />
+                <Mail className="w-3.5 h-3.5 text-[#8A5A35] shrink-0" />
                 <span className="truncate">venkateswaracashew@gmail.com</span>
               </a>
             </div>
           </div>
 
-          {/* Column 4: Export Quick Links */}
-          <div className="space-y-3">
-            <span className="font-mono text-[11px] uppercase tracking-wider text-stone-900 font-bold block">
-              Export Programs
+          {/* Column 4: Quick Navigation (2 cols) */}
+          <div className="space-y-3 lg:col-span-2">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-[#8A5A35] font-bold block">
+              NAVIGATION
             </span>
-            <ul className="space-y-2 text-xs">
+            <ul className="space-y-2 text-xs font-mono">
               <li>
-                <a href="#export-grades" className="hover:text-[#b45309] transition-colors flex items-center gap-1.5">
-                  <span>King Jumbo (Grade W-180)</span>
-                  <ExternalLink className="w-3 h-3 text-stone-400" />
+                <a href="#about" className="hover:text-[#183C2C] transition-colors">
+                  About Factory
                 </a>
               </li>
               <li>
-                <a href="#export-grades" className="hover:text-[#b45309] transition-colors flex items-center gap-1.5">
-                  <span>Jumbo Wholes (W-210 & W-240)</span>
-                  <ExternalLink className="w-3 h-3 text-stone-400" />
+                <a href="#products" className="hover:text-[#183C2C] transition-colors">
+                  Product Grades
                 </a>
               </li>
               <li>
-                <a href="#export-grades" className="hover:text-[#b45309] transition-colors flex items-center gap-1.5">
-                  <span>Standard Export (Grade W-320)</span>
-                  <ExternalLink className="w-3 h-3 text-stone-400" />
+                <a href="#process" className="hover:text-[#183C2C] transition-colors">
+                  7-Stage Process
                 </a>
               </li>
               <li>
-                <a href="#inquiry" className="hover:text-[#b45309] transition-colors flex items-center gap-1.5 font-semibold text-stone-900">
-                  <span>Instant Export RFQ Desk</span>
-                  <ExternalLink className="w-3 h-3 text-[#b45309]" />
+                <a href="#anatomy" className="hover:text-[#183C2C] transition-colors">
+                  Cashew Anatomy
+                </a>
+              </li>
+              <li>
+                <a href="#logistics" className="hover:text-[#183C2C] transition-colors">
+                  Export Logistics
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-[#183C2C] transition-colors font-bold text-[#183C2C]">
+                  RFQ Desk →
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Legal Row */}
+        {/* Bottom Legal & Back to Top Row */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 font-mono">
           <p>© {new Date().getFullYear()} Sri Venkateswara Cashew Manufacturers. All Rights Reserved.</p>
-          <p>Vetapalem, Prakasam District, Andhra Pradesh - 523 187, India.</p>
+          <div className="flex items-center gap-4">
+            <span>Vetapalem, Andhra Pradesh - 523 187, India</span>
+            <button
+              type="button"
+              onClick={scrollToTop}
+              className="flex items-center gap-1 text-stone-700 hover:text-stone-900 transition-colors cursor-pointer"
+            >
+              <span>Back to Top</span>
+              <ArrowUp className="w-3.5 h-3.5" />
+            </button>
+          </div>
         </div>
       </div>
     </footer>
